@@ -1,0 +1,114 @@
+.about-wrapper {
+  width: 50%;
+  margin: 0 auto;
+  height: calc(100vh - 60px - 7.5vh);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.about-wrapper .about-basic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.about-wrapper .about-basic .profile-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.about-wrapper .profile-img {
+  width: 200px;
+  height: 200px;
+}
+.about-wrapper .profile-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: #fff 5px solid;
+}
+.about-wrapper .animated-occupation {
+  font-size: 44px;
+  color: rgba(192, 193, 193, 0.522);
+  font-family: "Protest Strike", sans-serif;
+  width: 350px;
+}
+.about-wrapper .animated-occupation span {
+  position: relative;
+}
+.about-wrapper .animated-occupation span::before {
+  content: "Frontend";
+  color: aqua;
+  animation: words 20s infinite;
+}
+.about-wrapper .animated-occupation span::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  background-color: #151515;
+  border-left: 2px solid orangered;
+  right: -8px;
+  animation: cursor 0.8s infinite step-end, typing 5s steps(30) infinite;
+}
+
+@keyframes cursor {
+  to {
+    border-left: 2px solid #151515;
+  }
+}
+@keyframes words {
+  0%, 25% {
+    content: "Frontend";
+  }
+  26%, 50% {
+    content: "Backend";
+  }
+  51%, 75% {
+    content: "Full-stack";
+  }
+  76%, 100% {
+    content: "Freelancer";
+  }
+}
+@keyframes typing {
+  0%, 100% {
+    width: calc(100% + 8px);
+  }
+  50% {
+    width: 0;
+  }
+}
+@media (max-width: 700px) {
+  .about-wrapper {
+    margin: 0;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .about-wrapper .about-basic {
+    display: flex;
+    flex-direction: row;
+  }
+  .about-wrapper .about-basic .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+  .about-wrapper .about-basic .animated-occupation {
+    font-size: 24px;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+@media (max-width: 530px) {
+  .about-wrapper {
+    display: flex;
+  }
+  .about-wrapper .about-basic {
+    display: flex;
+    flex-direction: column;
+  }
+}

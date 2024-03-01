@@ -1,0 +1,22 @@
+@use "../../../../utils/v.scss";
+
+.logo-wrapper {
+  width: fit-content;
+  position: relative;
+  .logo-underline {
+    width: 100%;
+    height: 2.5px;
+    background-color: #fff;
+  }
+
+  p {
+    position: absolute;
+    right: 0;
+  }
+}
+
+@media (max-width: 450px){
+  .logo-wrapper{
+    font-size: 14px;
+  }
+}

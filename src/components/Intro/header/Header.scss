@@ -1,0 +1,8 @@
+@use "../../../utils/v.scss";
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7.5vh;
+}

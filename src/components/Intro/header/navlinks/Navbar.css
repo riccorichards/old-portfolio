@@ -1,0 +1,31 @@
+.nav-links-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.nav-links-wrapper li {
+  list-style-type: none;
+  color: rgb(192, 193, 193);
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+.nav-links-wrapper li:hover {
+  color: #fff;
+}
+.nav-links-wrapper li:nth-last-child(1) {
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 2.5px;
+  color: rgba(9, 9, 9, 0.975);
+}
+.nav-links-wrapper li:nth-last-child(1):hover {
+  box-shadow: 0 0 15px rgba(192, 193, 193, 0.522);
+}
+
+@media (max-width: 815px) {
+  .nav-links-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+  }
+}

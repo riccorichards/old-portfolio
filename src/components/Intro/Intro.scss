@@ -1,0 +1,68 @@
+@use "../../utils/v.scss";
+
+.intro-wrapper {
+  position: relative;
+
+  .social-networks {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .social-network {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 25px;
+      color: rgba(192, 193, 193, 0.522);
+      transition: all 0.25s ease-in-out;
+      &:hover {
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .journey-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-family: v.$main_font;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .social-networks {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 10px;
+      top: 98%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: fit-content;
+      height: fit-content;
+
+      span {
+        display: none;
+      }
+    }
+  }
+
+  
+}
